@@ -7,7 +7,7 @@ const $$ = (...fns) => {
 
 const percent = percent => a$ => {
   const c = a$.constructor.of;
-  return c((a$ * (percent * .01)));
+  return c(a$ * (percent * 0.01));
 };
 
 const addPercent = p => a$ => a$.add(percent(p)(a$));
@@ -18,5 +18,5 @@ module.exports = {
   $$,
   percent,
   addPercent,
-  subtractPercent,
+  subtractPercent
 };
